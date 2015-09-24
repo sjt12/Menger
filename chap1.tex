@@ -1,0 +1,59 @@
+\chapter{The First Proof}
+\chaps{The First Proof}
+
+In this chapter we will recount the way in which Menger's Theorem was presented in the Part B lecture course and the proof as an application of the max-flow-min-cut theorem.
+
+\section{Measures of Connectedness}
+
+Menger's Theorem is an equality between two measures of connectedness within a graph, in this section we build to the definitions of the measures required to state the theorem.
+
+\begin{defn}
+For a graph $G$, a set $S \subseteq V(G)$ \textbf{separates} $G$ if the graph $G-S$ obtained by removing the vertices of $S$ and all incident edges from $G$ is disconnected.
+\end{defn}
+
+For example, when $G$ is the cyclic graph $C_n$ any non-empty set $S \subseteq V(G)$ separates $G$, and in the case where $G = K_3$, then it is clear that any set $S$ with $|S| \geq 2$ will be separating.
+
+\begin{defn}
+A graph $G$ with $|G| > k$ is $\boldsymbol{k}$\textbf{-connected} if there is no set $S \subseteq V(G)$ with $|S| = k - 1$ such that $S$ separates $G$.
+\end{defn}
+
+Observe that this definition entails that every graph is $0$-connected and that a graph is $1$-connected if and only if it is a connected graph with at least two vertices. Thus, $k$-connectedness gives a generalization of the concept of a connected graph, and the maximum $k$ such that a graph is $k$-connected - or, equivalently, the size of a minimal separating set - provides a natural measure of the connectedness of a graph. 
+
+\begin{notat}
+We denote by $\kappa(G)$ the maximum $k$ such that $G$ is $k$-connected
+\end{notat}
+
+$\kappa(G)$ gives us a measure of the connectedness of a graph on a global scale. We now extend this to a local measure of how connected two given points in the graph are with relation to removing vertices. Since two adjacent vertices - vertices joined by a single edge - can never be disconnected by removing other vertices we restrict ourselves to non-adjacent vertices and the following definitions are as expected.
+
+\begin{defn}
+A set $S \subseteq V(G)$ separates distinct, non-adjacent vertices $x$ and $y$ in $G$ if $x$ and $y$ are in different connected components of $G - S$
+\end{defn}
+
+Note, that this formulation is equivalent to saying that $S$ is such that there are no paths between $x$ and $y$ in the residual graph $G-S$. We also extend our $\kappa$ notation.
+
+\begin{notat}
+We denote by $\kappa_G(x,y)$, or simply $\kappa(x,y)$, the minimum size of a set $S$ separating $x$ and $y$
+\end{notat} 
+
+NEED TO WRITE SOME MORE HERE :)
+
+\begin{defn}
+A pair of $x-y$ paths are \textbf{independent} if the only vertices they share are $x$ and $y$. A set of $x-y$ paths is independent if the paths are pairwise independent.
+\end{defn}
+
+As before the idea of connectedness we are seeking to capture is tied in with a dual notion of separation, for if we were to remove the interior (all vertices except the ends $x$ and $y$) of each of the paths in a maximally independent set of $x-y$ paths then we would disconnect $x$ and $y$ within the graph - there would be no path between them in the remainder, else we could add it to our set of paths contradicting the sets maximality. Since adjacent vertices - those joined by a single edge in the graph - can never be disconnected by removing other vertices from the graph we exclude such vertices from our definition. 
+
+\begin{notat}
+hi
+\end{notat}
+
+
+
+\newpage
+
+
+
+\thm[Menger's Theorem]{
+Let $x$ and $y$ be distinct non-adjacent vertices of
+a graph $G$. Then the maximum size of an independent set of $x–y$ paths is $\kappa_G(x, y)$.
+}

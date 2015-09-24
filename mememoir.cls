@@ -3433,7 +3433,7 @@
   \renewcommand{\printchapternum}{}
   \renewcommand{\afterchapternum}{}
   \renewcommand{\printchaptername}{}
-  \renewcommand{\afterchaptertitle}{\chapnumfont\hfill\thechapter\\\vspace*{-.3cm}\hrulefill\vspace*{3cm}\\}
+  \renewcommand{\afterchaptertitle}{\chapnumfont\hfill\thechapter\\\vspace*{-.5cm}\hrulefill\vspace*{2cm}\\}
 }
 
 \makechapterstyle{veelo}{%

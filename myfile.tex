@@ -1,14 +1,13 @@
 %
 %Define fonts for prettiness
 %
-\newcommand{\nfont}{Georgia}
-\newcommand{\ttfont}{Georgia}
-\newcommand{\sffont}{Georgia}
-\newcommand{\commodorefont}{Georgia}
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Ligatures={NoCommon,TeX}]{\nfont}
-\setmonofont[Scale=0.8]{\ttfont}
-\setsansfont[Scale=0.9]{\sffont}
+%\newcommand{\nfont}{\rmdefault}
+%\newcommand{\ttfont}{\ttdefault}
+%\newcommand{\sffont}{\sfdefault}
+%\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Ligatures={NoCommon,TeX}]{\nfont}
+%\setmonofont[Scale=0.8]{\ttfont}
+%\setsansfont[Scale=0.9]{\sffont}
 
 %
 %Oxford logo for title page
@@ -50,3 +49,11 @@
 \newenvironment{acky}
 {\renewcommand{\abstractname}{Acknowledgments}\abstract}
 {\endabstract}
+
+%
+%Define Theorem Environments
+%
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem*{notat}{Notation}
