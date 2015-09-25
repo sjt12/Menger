@@ -23,19 +23,24 @@ Observe that this definition entails that every graph is $0$-connected and that 
 We denote by $\kappa(G)$ the maximum $k$ such that $G$ is $k$-connected
 \end{notat}
 
-$\kappa(G)$ gives us a measure of the connectedness of a graph on a global scale. We now extend this to a local measure of how connected two given points in the graph are with relation to removing vertices. Since two adjacent vertices - vertices joined by a single edge - can never be disconnected by removing other vertices we restrict ourselves to non-adjacent vertices and the following definitions are as expected.
+$\kappa(G)$ gives us a measure of the connectedness of a graph on a global scale. We now extend this to a local measure of how connected two given points in the graph are with relation to removing vertices. Since two adjacent vertices - vertices joined by a single edge - can never be disconnected by removing other vertices we restrict ourselves to non-adjacent vertices and the following definition is as expected.
 
 \begin{defn}
 A set $S \subseteq V(G)$ separates distinct, non-adjacent vertices $x$ and $y$ in $G$ if $x$ and $y$ are in different connected components of $G - S$
 \end{defn}
 
-Note, that this formulation is equivalent to saying that $S$ is such that there are no paths between $x$ and $y$ in the residual graph $G-S$. We also extend our $\kappa$ notation.
-
 \begin{notat}
 We denote by $\kappa_G(x,y)$, or simply $\kappa(x,y)$, the minimum size of a set $S$ separating $x$ and $y$
 \end{notat} 
 
-NEED TO WRITE SOME MORE HERE :)
+The statement that $x$ and $y$ are in different connected components of $G-S$ is equivalent to saying that there are no paths between $x$ and $y$ in the residual graph $G-S$. In lay terms one might measure the connectedness of two cities by how many different ways there are of travelling between them. For example in Figure \ref{fig:towns}
+
+\begin{figure}[h]
+\label{fig:towns}
+\input{towns}
+\caption{Demonstrating levels of connectedness}
+\end{figure}
+
 
 \begin{defn}
 A pair of $x-y$ paths are \textbf{independent} if the only vertices they share are $x$ and $y$. A set of $x-y$ paths is independent if the paths are pairwise independent.
