@@ -2,8 +2,11 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: acky.aux
 A level-1 auxiliary file: introduction.aux
-The style file: plain.bst
+A level-1 auxiliary file: chap1.aux
+The style file: mybib.bst
 Database file #1: biblio.bib
 Warning--entry type for "gt15" isn't style-file defined
 --line 1 of file biblio.bib
-(There was 1 warning)
+Warning--entry type for "meng" isn't style-file defined
+--line 8 of file biblio.bib
+(There were 2 warnings)
